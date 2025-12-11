@@ -5,7 +5,6 @@ import web from "../../assets/web.jpg";
 import mobile from "../../assets/mobile.jpg";
 import webdesign from "../../assets/webdesign.jpg";
 
-
 interface Service {
   id: number;
   title: string;
@@ -42,7 +41,8 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="relative py-20 bg-white overflow-hidden">
+    <section id="services" className="relative pt-28 py-20 bg-white overflow-hidden">
+      
       {/* Floating background circles */}
       {[...Array(3)].map((_, i) => (
         <motion.div
@@ -61,7 +61,7 @@ const Services: React.FC = () => {
 
       <div className="mx-auto px-6 relative z-10 max-w-7xl">
         <motion.h2
-         className="text-center md:text-5xl font-bold text-blue-900 mb-8"
+          className="text-center md:text-5xl font-bold text-blue-900 mb-8"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}

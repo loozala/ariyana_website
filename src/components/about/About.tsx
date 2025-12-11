@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 
 const About: React.FC = () => {
   return (
-    <div className="w-full min-h-screen bg-gray-50 px-4 py-20 flex justify-center items-start">
+    <div className="w-full min-h-screen bg-gray-50 px-4 pt-28 pb-20 flex justify-center items-start">
+
       <motion.div
         className="max-w-4xl text-center"
         initial={{ opacity: 0, y: 50 }}

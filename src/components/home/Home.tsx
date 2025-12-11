@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Home: React.FC = () => {
   return (
-    <div className="w-full min-h-screen bg-gray-50">
+   <div className="w-full min-h-screen bg-gray-50 pt-28">
       {/* Quotation Section */}
       <section className="py-12 text-center px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
@@ -56,6 +56,7 @@ const Home: React.FC = () => {
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
               We are a specialized technology company dedicated to providing end-to-end digital solutions for your business. We excel in Web Development, where our experts custom-build and meticulously design your website, ensuring it has a dynamic interface, powerful functionality, and a flawless user experience. Alongside this, we offer robust Cloud Hosting services, giving your essential applications and data a secure, high-speed, and perfectly scalable environment on the internet. Our integrated approach ensures you receive a complete solution, a high-performing online platform that is secure, reliable, and perfectly positioned to drive your continuous growth.
             </p>
+
           </motion.div>
         </motion.div>
       </section>
