@@ -1,0 +1,8 @@
+/* src/components/navbar/Navbar.css */
+
+/* Change font for company name */
+.navbar-company {
+  font-family: 'Georgia', serif; /* You can use any font here */
+  font-size: 1.75rem; /* Equivalent to text-2xl */
+  font-weight: bold;
+}
