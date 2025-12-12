@@ -77,10 +77,10 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
-            {/* ======================= Mission & Vision (Gecko Style) ======================= */}
+            {/* Mission & Vision */}
             <section className="py-24 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-start relative z-10">
 
-                {/* Mission (slide from right) */}
+                {/* Mission */}
                 <motion.div
                     initial={{ opacity: 0, x: 80 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -91,7 +91,6 @@ const Home: React.FC = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                         Who We Are
                     </h2>
-
                     <p className="text-gray-600 leading-relaxed text-lg">
                         We’re a passionate team dedicated to helping brands and individuals
                         stand out. From elegant portfolios to full-scale digital platforms,
@@ -100,7 +99,7 @@ const Home: React.FC = () => {
                     </p>
                 </motion.div>
 
-                {/* Vision (slide from left) */}
+                {/* Vision */}
                 <motion.div
                     initial={{ opacity: 0, x: -80 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -111,7 +110,6 @@ const Home: React.FC = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                         Where We're Going
                     </h2>
-
                     <p className="text-gray-600 leading-relaxed text-lg">
                         Our goal is to simplify digital growth by delivering accessible,
                         high-quality web development services. We help startups, freelancers,
@@ -120,7 +118,6 @@ const Home: React.FC = () => {
                 </motion.div>
 
             </section>
-            {/* ======================================================================= */}
 
             {/* About Section */}
             <section id="about" className="py-20 px-4 flex justify-center items-start relative z-10">
@@ -145,10 +142,11 @@ const Home: React.FC = () => {
                         <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                             We are a specialized technology company dedicated to providing end-to-end digital solutions for your business. We excel in Web Development, where our experts custom-build and meticulously design your website, ensuring it has a dynamic interface, powerful functionality, and a flawless user experience. Alongside this, we offer robust Cloud Hosting services, giving your essential applications and data a secure, high-speed, and perfectly scalable environment on the internet. Our integrated approach ensures you receive a complete solution, a high-performing online platform that is secure, reliable, and perfectly positioned to drive your continuous growth.
                         </p>
-
                     </motion.div>
                 </motion.div>
             </section>
+
+          
 
         </div>
     );
