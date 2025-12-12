@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import uiux from "../../assets/uiux.jpg";
 import web from "../../assets/web.jpg";
 import mobile from "../../assets/mobile.jpg";
@@ -13,6 +13,8 @@ interface Service {
 }
 
 const Services: React.FC = () => {
+  const [zoomImage, setZoomImage] = useState<string | null>(null);
+
   const services: Service[] = [
     {
       id: 1,
@@ -42,7 +44,6 @@ const Services: React.FC = () => {
 
   return (
     <section id="services" className="relative pt-28 py-20 bg-white overflow-hidden">
-      
       {/* Floating background circles */}
       {[...Array(3)].map((_, i) => (
         <motion.div
@@ -78,6 +79,7 @@ const Services: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05, rotate: 1 }}
               transition={{ duration: 0.5, delay: service.id * 0.1 }}
+              onClick={() => setZoomImage(service.image)}
             >
               <img
                 src={service.image}
@@ -94,6 +96,29 @@ const Services: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {/* 🔍 Zoom Modal */}
+      <AnimatePresence>
+        {zoomImage && (
+          <motion.div
+            className="fixed inset-0 bg-black/70 flex justify-center items-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setZoomImage(null)}
+          >
+            <motion.img
+              src={zoomImage}
+              className="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl"
+              initial={{ scale: 0.5 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.4 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
