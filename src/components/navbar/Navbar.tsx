@@ -59,9 +59,9 @@ const Navbar: React.FC = () => {
                         {/* Contact Button */}
                         <Link
                             to="/contact"
-                            className="ml-12 bg-yellow-400 text-blue-900 font-semibold px-6 py-3 rounded-lg hover:bg-yellow-500 transition duration-300 text-lg"
+                            className="ml-12 bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg hover:bg-yellow-500 transition duration-300 text-lg"
                         >
-                            Contact Us
+                            CONTACT US
                         </Link>
                     </div>
                 </div>
